@@ -26,26 +26,35 @@ namespace NpocoDemo
 
 
             #region 连接oracle 数据库
-            using (IDatabase db = new Database("ssss"))
-            {
-                try
-                {
-                    List<STAFF> users = db.Fetch<STAFF>("select STAFF_ID, STAFF_NAME from STAFF");
+            //using (IDatabase db = new Database("ssss"))
+            //{
+            //    try
+            //    {
+            //        List<STAFF> users = db.Fetch<STAFF>("select STAFF_ID, STAFF_NAME from STAFF");
 
-                    foreach (var item in users)
-                    {
-                        Console.WriteLine(item.STAFF_ID + " " + item.STAFF_NAME);
-                    }
-                }
-                catch (Exception ex)
-                {
+            //        foreach (var item in users)
+            //        {
+            //            Console.WriteLine(item.STAFF_ID + " " + item.STAFF_NAME);
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
 
-                    throw;
-                }
-               
+            //        throw;
+            //    }
 
-            }
 
+            //}
+
+
+            #endregion
+
+            #region 通过id查询
+            IDatabase db = new Database("ssss");
+
+            STAFF staff = db.SingleById<STAFF>(7); //这里指主键，我们没有指定主键，所以它不知道
+
+            Console.WriteLine(staff.STAFF_NAME);
 
             #endregion
 
@@ -59,9 +68,14 @@ namespace NpocoDemo
         public string IDType { get; set; }
     }
 
+
+    //Mapping 关系
+    [TableName("STAFF")]
+    [PrimaryKey("STAFF_ID")]  //加了之后，就可以通过ID来查询了
     public class STAFF
     {
-        public string STAFF_ID { get; set; }
+        [Column("STAFF_ID")]
+        public int STAFF_ID { get; set; }
         public string STAFF_NAME { get; set; }
     }
 }

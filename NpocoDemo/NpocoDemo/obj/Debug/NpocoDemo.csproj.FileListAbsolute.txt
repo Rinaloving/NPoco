@@ -19,3 +19,13 @@ D:\NpocoDemo\NpocoDemo\NpocoDemo\obj\Debug\NpocoDemo.csproj.CoreCompileInputs.ca
 D:\NpocoDemo\NpocoDemo\NpocoDemo\obj\Debug\NpocoDemo.csproj.CopyComplete
 D:\NpocoDemo\NpocoDemo\NpocoDemo\obj\Debug\NpocoDemo.exe
 D:\NpocoDemo\NpocoDemo\NpocoDemo\obj\Debug\NpocoDemo.pdb
+D:\MyGitHub\NPoco\NpocoDemo\NpocoDemo\bin\Debug\NpocoDemo.exe.config
+D:\MyGitHub\NPoco\NpocoDemo\NpocoDemo\bin\Debug\NpocoDemo.exe
+D:\MyGitHub\NPoco\NpocoDemo\NpocoDemo\bin\Debug\NpocoDemo.pdb
+D:\MyGitHub\NPoco\NpocoDemo\NpocoDemo\bin\Debug\Oracle.DataAccess.dll
+D:\MyGitHub\NPoco\NpocoDemo\NpocoDemo\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\MyGitHub\NPoco\NpocoDemo\NpocoDemo\obj\Debug\NpocoDemo.csprojResolveAssemblyReference.cache
+D:\MyGitHub\NPoco\NpocoDemo\NpocoDemo\obj\Debug\NpocoDemo.csproj.CoreCompileInputs.cache
+D:\MyGitHub\NPoco\NpocoDemo\NpocoDemo\obj\Debug\NpocoDemo.csproj.CopyComplete
+D:\MyGitHub\NPoco\NpocoDemo\NpocoDemo\obj\Debug\NpocoDemo.exe
+D:\MyGitHub\NPoco\NpocoDemo\NpocoDemo\obj\Debug\NpocoDemo.pdb
