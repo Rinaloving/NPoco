@@ -50,13 +50,36 @@ namespace NpocoDemo
             #endregion
 
             #region 通过id查询
-            IDatabase db = new Database("ssss");
+            //IDatabase db = new Database("ssss");
 
-            STAFF staff = db.SingleById<STAFF>(7); //这里指主键，我们没有指定主键，所以它不知道
+            //STAFF staff = db.SingleById<STAFF>(7); //这里指主键，我们没有指定主键，所以它不知道
 
-            Console.WriteLine(staff.STAFF_NAME);
+            //Console.WriteLine(staff.STAFF_NAME);
 
             #endregion
+
+            #region via Sql (通过sql语句查找)
+
+            IDatabase db = new Database("ssss");
+            STAFF staff = db.Single<STAFF>("WHERE STAFF_ID =@0", 7);
+            Console.WriteLine(staff.STAFF_NAME); //OK
+
+            #endregion
+
+            #region 插入数据
+            IDatabase db2 = new Database("estate");
+            STAFFPERMISSON st = new STAFFPERMISSON();
+            st.STAFFID = "66";
+            st.STAFFNAME = "蜡笔小新";
+            st.ISPROMISE = 1;
+            
+           
+     
+            db2.Insert<STAFFPERMISSON>("STAFFPERMISSON", "STAFFID",false, st);
+
+
+            #endregion
+
 
         }
     }
@@ -77,5 +100,24 @@ namespace NpocoDemo
         [Column("STAFF_ID")]
         public int STAFF_ID { get; set; }
         public string STAFF_NAME { get; set; }
+    }
+
+    [TableName("STAFFPERMISSON")]
+    [PrimaryKey("STAFFID")]
+    public class STAFFPERMISSON
+    {
+        //[Column("STAFFID")]
+        public string STAFFID { get; set; }
+        [Column("STAFFNAME")]
+        public string STAFFNAME { get; set; }
+        [Column("ISPROMISE")]
+        public int ISPROMISE { get; set; }
+
+        //public STAFFPERMISSON(string _staffid, string _staffname, int _ispromise)
+        //{
+        //    this.STAFFID = _staffid;
+        //    this.STAFFNAME = _staffname;
+        //    this.ISPROMISE = _ispromise;
+        //}
     }
 }
