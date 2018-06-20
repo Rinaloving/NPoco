@@ -1,0 +1,10 @@
+C:\Users\Administrator\source\repos\NpocoDemo\NpocoDemo\bin\x86\Debug\NpocoDemo.exe.config
+C:\Users\Administrator\source\repos\NpocoDemo\NpocoDemo\bin\x86\Debug\NpocoDemo.exe
+C:\Users\Administrator\source\repos\NpocoDemo\NpocoDemo\bin\x86\Debug\NpocoDemo.pdb
+C:\Users\Administrator\source\repos\NpocoDemo\NpocoDemo\bin\x86\Debug\NPoco.dll
+C:\Users\Administrator\source\repos\NpocoDemo\NpocoDemo\bin\x86\Debug\Oracle.DataAccess.dll
+C:\Users\Administrator\source\repos\NpocoDemo\NpocoDemo\obj\x86\Debug\NpocoDemo.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\NpocoDemo\NpocoDemo\obj\x86\Debug\NpocoDemo.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\NpocoDemo\NpocoDemo\obj\x86\Debug\NpocoDemo.csproj.CopyComplete
+C:\Users\Administrator\source\repos\NpocoDemo\NpocoDemo\obj\x86\Debug\NpocoDemo.exe
+C:\Users\Administrator\source\repos\NpocoDemo\NpocoDemo\obj\x86\Debug\NpocoDemo.pdb
