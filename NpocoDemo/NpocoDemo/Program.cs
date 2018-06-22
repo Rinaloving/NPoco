@@ -60,26 +60,38 @@ namespace NpocoDemo
 
             #region via Sql (通过sql语句查找)
 
-            IDatabase db = new Database("ssss");
-            STAFF staff = db.Single<STAFF>("WHERE STAFF_ID =@0", 7);
-            Console.WriteLine(staff.STAFF_NAME); //OK
+            //IDatabase db = new Database("ssss");
+            //STAFF staff = db.Single<STAFF>("WHERE STAFF_ID =@0", 7);
+            //Console.WriteLine(staff.STAFF_NAME); //OK
 
             #endregion
 
             #region 插入数据
-            IDatabase db2 = new Database("estate");
-            STAFFPERMISSON st = new STAFFPERMISSON();
-            st.STAFFID = "66";
-            st.STAFFNAME = "蜡笔小新";
-            st.ISPROMISE = 1;
-            
-           
-     
-            db2.Insert<STAFFPERMISSON>("STAFFPERMISSON", "STAFFID",false, st);
+            //IDatabase db2 = new Database("estate");
+            //STAFFPERMISSON st = new STAFFPERMISSON();
+            //st.STAFFID = "66";
+            //st.STAFFNAME = "蜡笔小新";
+            //st.ISPROMISE = 1;
+
+
+
+            //db2.Insert<STAFFPERMISSON>("STAFFPERMISSON", "STAFFID",false, st);
 
 
             #endregion
 
+            #region 读取数据 与更新数据
+            IDatabase db = new Database("ssss");
+            var staff = db.SingleById<STAFF>(7);
+            staff.STAFF_NAME = "海绵宝宝";
+            db.Update(staff);
+            Console.WriteLine(staff.STAFF_ID+" : "+staff.STAFF_NAME);
+
+
+
+            #endregion
+
+            Console.ReadKey();
 
         }
     }
