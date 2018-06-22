@@ -93,14 +93,32 @@ namespace NpocoDemo
 
 
             #region 删除数据
-            IDatabase db = new Database("estate");
+            //IDatabase db = new Database("estate");
 
-            var staffpermission = db.SingleById<STAFFPERMISSON>(66);
-            db.Delete(staffpermission);
+            //var staffpermission = db.SingleById<STAFFPERMISSON>(66);
+            //db.Delete(staffpermission);  //db.Delete<STAFFPERMISSON>(1);
 
 
 
             #endregion
+
+
+            #region 插入或更新数据
+
+            IDatabase db = new Database("estate");
+            STAFFPERMISSON sn = new STAFFPERMISSON()
+            {
+                STAFFID = "23",
+                STAFFNAME = "大力水手",
+                ISPROMISE = 1
+            };
+
+
+
+            db.Save(sn);
+
+            #endregion
+
 
             Console.ReadKey();
 
