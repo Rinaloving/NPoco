@@ -81,11 +81,22 @@ namespace NpocoDemo
             #endregion
 
             #region 读取数据 与更新数据
-            IDatabase db = new Database("ssss");
-            var staff = db.SingleById<STAFF>(7);
-            staff.STAFF_NAME = "海绵宝宝";
-            db.Update(staff);
-            Console.WriteLine(staff.STAFF_ID+" : "+staff.STAFF_NAME);
+            //IDatabase db = new Database("ssss");
+            //var staff = db.SingleById<STAFF>(7);
+            //staff.STAFF_NAME = "海绵宝宝";
+            //db.Update(staff);
+            //Console.WriteLine(staff.STAFF_ID+" : "+staff.STAFF_NAME);
+
+
+
+            #endregion
+
+
+            #region 删除数据
+            IDatabase db = new Database("estate");
+
+            var staffpermission = db.SingleById<STAFFPERMISSON>(66);
+            db.Delete(staffpermission);
 
 
 
