@@ -105,19 +105,47 @@ namespace NpocoDemo
 
             #region 插入或更新数据
 
-            IDatabase db = new Database("estate");
-            STAFFPERMISSON sn = new STAFFPERMISSON()
-            {
-                STAFFID = "23",
-                STAFFNAME = "大力水手",
-                ISPROMISE = 1
-            };
+            //IDatabase db = new Database("estate");
+            //STAFFPERMISSON sn = new STAFFPERMISSON()
+            //{
+            //    STAFFID = "23",
+            //    STAFFNAME = "大力水手",
+            //    ISPROMISE = 1
+            //};
 
 
 
-            db.Save(sn);
+            //db.Save(sn);
 
             #endregion
+
+            #region 查询集合
+            
+            IDatabase db = new Database("ssss");
+            //Eager(热切的，渴望的)
+            List<STAFF> staff = db.Fetch<STAFF>(); //Fetch all 
+            Console.WriteLine(staff.Count.ToString());
+
+            List<STAFF> staff2 = db.Fetch<STAFF>("WHERE STAFF_ID = 7");
+            foreach (var item in staff2)
+            {
+                Console.WriteLine(item.STAFF_NAME);
+            }
+            List<STAFF> staff3 = db.Fetch<STAFF>("SELECT * FROM STAFF WHERE STAFF_ID = 7");
+            foreach (var item in staff3)
+            {
+                Console.WriteLine(item.STAFF_NAME);
+            }
+            //Lazy
+            List<STAFF> staff4 = db.Query<STAFF>("SELECT * FROM STAFF WHERE STAFF_ID = 7") as List<STAFF>; // 类型转换异常
+            foreach (var item in staff4)
+            {
+                Console.WriteLine(item.STAFF_NAME);
+            }
+
+            #endregion
+
+
 
 
             Console.ReadKey();
